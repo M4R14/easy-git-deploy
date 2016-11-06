@@ -1,4 +1,3 @@
-![Screenshot](screenshot.png)
 
 ## #EasyGitDeploy
 
