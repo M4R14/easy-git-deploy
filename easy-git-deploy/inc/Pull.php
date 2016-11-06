@@ -16,7 +16,11 @@ class Pull extends VcsAbstract {
             // only first run
             if (!is_dir('./.git')) {
                 // The "." at the end specifies the current folder as the checkout folder!
-                $this->exec_and_log('Cloning repo for the first time.', "git clone '" . $this->_url . "' .");
+                $this->exec_and_log('Cloning repo for the first time.', "git clone '" . $this->_url . "' foo");
+                exec('mv foo/* foo/.git* .');
+                exec('rmdir foo');
+                
+                $this->exec_and_log('Switching to master branch.', 'git checkout ' . $this->_branch);
             }
 
             // normal run
