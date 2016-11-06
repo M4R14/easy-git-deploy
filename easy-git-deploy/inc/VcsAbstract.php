@@ -7,7 +7,7 @@ abstract class VcsAbstract implements VcsInterface {
      *
      * @var string
      */
-    private $_log = '../deployments.log';
+    private $_log = '../../deployments.log';
 
     /**
      * All logged messages of the current run
